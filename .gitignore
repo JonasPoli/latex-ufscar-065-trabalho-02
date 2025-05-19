@@ -1,0 +1,62 @@
+# Arquivos temporários e auxiliares do LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.lof
+*.lot
+*.lol
+*.bcf
+*.run.xml
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.maf
+*.mtc*
+*.xdy
+
+# PDFs gerados (descomente se quiser ignorar PDFs finais)
+# *.pdf
+
+# Arquivos do TeXstudio
+*.txss
+*.bak
+*.backup
+
+# Arquivos específicos do TeXiFy IDEA e PhpStorm
+.idea/
+*.iml
+
+# Arquivos específicos do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ícones personalizados no macOS
+Icon?
+
+# Arquivos Thumbnails
+._*
+**/._*
+
+# Arquivos temporários do macOS
+.Spotlight-V100
+.Trashes
+
+# Pastas específicas de cache do macOS
+*.swp
+out/*
+main.pdf

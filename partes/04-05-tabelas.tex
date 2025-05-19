@@ -1,0 +1,67 @@
+
+
+ORIENTAÇÃO: usar o  ambiente \verb|quadro| que foi especialmente criado para esse template, definido no arquivo \verb|pacoteBasico.sty|. Dentro desse ambiente é criado uma tabela (ambiente \verb|tabular|). Por padrão, todos os quadros serão listados na lista de figuras.
+% Para que o quadro fique próxima ao texto a que se refere, para isso, dentro do ambiente quadro, inclua o comando \label{nome do quadro} e no texto indique \ref e selecione o nome do quadro. 
+\begin{quadro}[H]
+	\centering
+	\caption{Atribuição do título das seções.}
+	\begin{tabularx}{\columnwidth}{|X|X|X|X|X|}
+		\hline
+		Indic. numérico & Título da seção & Indicativo da seção & Sugestão do destaque tipográfico & Comando \\ \hline
+		
+		\textbf{1} & \textbf{INTRODUÇÃO} & \textbf{seção primária} & \textbf{LETRAS MAIÚSCULAS EM NEGRITO} & \textit{\textbackslash chapter}\{\} \\ \hline
+		
+		\textbf{2} & \textbf{A CRIAÇÃO ARTÍSTICA} & \textbf{seção primária} & \textbf{LETRAS MAIÚSCULAS EM NEGRITO} & \textit{\textbackslash chapter}\{\} \\ \hline
+		
+		2.1 & O PROCESSO DE CRIAÇÃO & seção secundária & LETRAS MAIÚSCULAS E SEM NEGRITO  & \textit{\textbackslash section}\{\} \\ \hline %(excepcionalmente para essa seção, deve  digitar o título em caixa alta (MAIÚSCULO)
+		
+		2.1.1 & Da intenção à realização & seção terciária & Primeira letra da   primeira palavra em maiúsculo e sem negrito & \textit{\textbackslash subsection}\{\} \\ \hline
+		
+		\textit{\textbf{2.1.1.1}} & \textit{\textbf{O artista como primeiro leitor de sua obra}} & \textit{\textbf{seção quaternária}} & \textit{\textbf{Primeira letra da primeira palavra em maiúscula, com negrito e itálico}} & \textit{\textbackslash subsubsection}\{\} \\ \hline
+		
+		\textit{2.1.1.2.1} & \textit{O espectador-artista} & \textit{seção quinária} & \textit{Primeira letra da primeira palavra em maiúscula e itálico} & \textit{\textbackslash subsubsubsection} \{\} \\ \hline
+		
+		\textbf{3} & \textbf{CONCLUSÃO} & \textbf{seção primária} & \textbf{LETRAS MAIÚSCULAS EM NEGRITO} & \textit{\textbackslash chapter}\{\} \\ \hline
+		
+		& \textbf{REFERÊNCIAS} & \textbf{seção primária} & \textbf{LETRAS MAIÚSCULAS EM NEGRITO, TÍTULOS SEM INDICATIVO NUMÉRICO} & \textbf{Consultar \textit{template}} \\ \hline
+		
+		& \textbf{APÊNDICES} & \textbf{seção primária} & \textbf{LETRAS MAIÚSCULAS EM NEGRITO} & \textbf{Consultar \textit{template}} \\ \hline
+		
+		& \textbf{ANEXOS} & \textbf{seção primária} & \textbf{LETRAS MAIÚSCULAS EM NEGRITO} & \textbf{Consultar \textit{template}}\\ \hline
+		
+	\end{tabularx} \label{quadro:ex}
+	\raggedright 
+	{\small Fonte: \citeonline{unesp2023for}}
+\end{quadro}
+
+
+
+\section {Tabelas}
+As tabelas trazem informações não discursivas com dados numéricos tratados estatisticamente e são padronizadas conforme as Normas de Apresentação Tabular do \citeonline{IBGE1993}. Deve ser citada no texto, inserida o mais próximo possível do trecho a que se referem. Observe o exemplo na Tabela \ref{tab:ex}.
+% Para que a tabela fique próxima ao texto a que se refere, para isso, dentro do ambiente table, inclua o comando \label{nome da tabela} e no texto indique \ref e selecione o nome da tabela. 
+\begin{itemize}
+	\item lados esquerdo e direito da tabela sempre abertos;
+	\item partes superior e inferior sempre fechadas;
+	\item não há traços horizontais e verticais para separar números, em seu interior.
+\end{itemize}
+
+Observação: Devem conter a fonte mesmo que elaborada pelo autor.
+
+\begin{table}[H]
+	\centering
+	\caption{Trilhos fixos.}
+	\begin{tabular}{c|c|c|c|c|c}
+		\hline
+		Tipo & Trilho base [B] & Gabarito (ideal) [G] & Calço de enchimento [tc] & Presilha [tp] & Parafuso \\
+		\hline 
+		TR-37 & 122,2 & 194 & 7,9 & 9,5 & 22,2 \\
+		TR-45 & 130,2 & 202 & 9,5 & 9,5 & 22,2 \\
+		TR-50 & 136,5 & 208 & 9,5 & 12,5 & 25,4 \\
+		TR-52 & 131,7 & 204 & 9,5 & 12,5 & 25,4 \\
+		TR-57 & 139,7 & 212 & 9,5 & 12,5 & 25,4 \\
+		\hline
+	\end{tabular}
+	\raggedright
+	{\small Fonte: Elaborada pelos autores.}
+	\label{tab:ex}
+\end{table}

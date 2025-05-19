@@ -1,0 +1,116 @@
+
+% Modelo de Trabalho Acadêmico da UNESP de Guaratinguetá v-2.1
+% atualização Copyright 2024 by Biblioteca FEG UNESP com colaboração de Vitor Pinto Ribeiro and Gustavo Santos Borges and Ronaldo César de Paiva
+% Modelo de Trabalho Acadêmico da UNESP de Guaratinguetá v-1.0
+% original copyright 2017 by Eduardo Rohde Eras
+
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%
+%----------------------------------------------------------------------------------------%
+%APRESENTAÇÃO 
+% Este modelo pode ser usado como apoio para seu trabalho acadêmico e é destinado para ser usado no Word, não aplicável a outros editores de texto.
+%
+%Essas instruções são voltadas para a comunidade acadêmica da Universidade Estadual Paulista “Júlio de Mesquita Filho” (Unesp). Caso você seja de outra instituição, verifique as regras vigentes da sua universidade ou faculdade.
+%
+%O uso deste modelo não substitui o conhecimento das normas, diretrizes da universidade e orientações de seus professores e a Rede de Bibliotecas da Unesp está isenta de eventuais e quaisquer problemas ou prejuízos decorrentes do uso deste arquivo em softwares não licenciados, arquivos corrompidos, vírus ou quaisquer outros motivos.
+%
+%Em caso de dúvidas, consulte o Manual de normalização de trabalhos acadêmicos: apresentação: ABNT (2023): \url{https://docs.google.com/document/d/1ipkGiAUnAr_YBTrpFJpnud3aa4llBsROpBdkUfw91L0/edit?usp=sharing}
+%----------------------------------------------------------------------------------------%
+% C L A S S E   D O   D O C U M E N T O
+%----------------------------------------------------------------------------------------%
+
+\PassOptionsToPackage{colorlinks=true, allcolors=black}{hyperref}
+\documentclass[
+  %----------------------------------------------------------------------------------------%
+  %Opções da classe 'memoir'
+  %----------------------------------------------------------------------------------------%
+  12pt,		% Tamanho da Fonte.
+  a4paper,	% Tamanho da página.
+  openright,  % Capítulos começam em páginas ímpares (insere uma página vazia se necessário).
+  oneside,	% Para impressão em frente e verso utilizar twoside.
+  %----------------------------------------------------------------------------------------%
+  %Opções da classe 'abntex2'
+  %----------------------------------------------------------------------------------------%
+  chapter=TITLE,		%Títulos de capítulos convertidos em letras maiúsculas.
+  section=TITLE,		%Títulos de seções convertidos em letras maiúsculas.
+  %----------------------------------------------------------------------------------------%
+  %Opções da classe 'babel'
+  %----------------------------------------------------------------------------------------%
+  english,	%Idioma adicional para hifenização.
+  french,	    %Idioma adicional para hifenização.
+  spanish,	%Idioma adicional para hifenização.
+  brazil	    %Idioma principal do documento.
+  %----------------------------------------------------------------------------------------%
+]{abntex2}
+
+%----------------------------------------------------------------------------------------%
+% P A C O T E S
+%
+% Insira aqui os pacotes que for utilizar em seu documento. Para saber quais pacotes o
+% template já está utilizando, confira o arquivo "pacoteBasico.sty".
+%----------------------------------------------------------------------------------------%
+    
+    \usepackage{pacoteBasico}   %Pacote Básico de formatação no padrão da UNESP/FEG
+    \usepackage{color}		    %Controle das cores.
+    \usepackage{graphicx}	    %Inclusão de gráficos.
+    \usepackage{lipsum}		    %Para geração de 'Dummy Text'.
+    \usepackage{pdfpages}       %Para inclusão de arquivos pdf
+    \usepackage[table,xcdraw]{xcolor}
+
+
+\input{partes/01-info.tex}
+\input{partes/02-pre-textual.tex}
+
+    \newpage
+    
+    %------------------------------------------------------------------------------------%
+    %                                                                                    %
+    %                           C O R P O   D O   T E X T O                              %
+    %                                                                                    %
+    %                     Seu trabalho começa a ser digitado aqui.                       %
+    %                                                                                    %
+    % Início do corpo do texto. A partir desse comando será impresso o número de páginas.% 
+    %------------------------------------------------------------------------------------%
+    
+    \textual
+    \pagestyle{simple} 
+    
+    %------------------------------------------------------------------------------------%
+    
+    \input{partes/03-introducao.tex}
+    \input{partes/04-desenvolvimento.tex}
+    \input{partes/05-conclusao.tex}
+
+    
+
+
+    \postextual
+    
+    %------------------------------------------------------------------------------------%
+    % R E F E R Ê N C I A S
+    %
+    % OBRIGATÓRIO. Será gerada automaticamente a partir do arquivo "references.bib".
+    %------------------------------------------------------------------------------------%
+    
+    \bibliography{references}
+
+    
+    \input{partes/06-glossario.tex}
+    \input{partes/07-apendice01.tex}        
+  	\input{partes/08-anexo01.tex}
+ 	\input{partes/09-dados-curriculares.tex}
+  	
+  	
+\end{document}
+
