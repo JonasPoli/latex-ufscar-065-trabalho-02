@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Vocabulário - AgroSíntese</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .sidebar .nav-link.active {
+      background-color: #0d6efd;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <nav id="sidebar" class="sidebar js-sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="#">
+          <span class="align-middle">AgroSíntese</span>
+        </a>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-telephone"></i> DDD</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-map"></i> Regiões</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-translate"></i> Dialetos</a></li>
+          <li class="sidebar-item active"><a class="sidebar-link" href="#"><i class="bi bi-journal-text"></i> Vocabulário</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-person-badge"></i> Administradores</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-people"></i> Usuários</a></li>
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-chat-dots"></i> Conversas</a></li>
+          <li class="sidebar-item">
+            <a data-bs-toggle="collapse" class="sidebar-link" href="#relatorios"><i class="bi bi-file-earmark-bar-graph"></i> Relatórios</a>
+            <ul id="relatorios" class="sidebar-dropdown list-unstyled collapse">
+              <li class="sidebar-item"><a class="sidebar-link" href="#">Relatório 1</a></li>
+              <li class="sidebar-item"><a class="sidebar-link" href="#">Relatório 2</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="bi bi-box-arrow-right"></i> Logoff</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main">
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+        <h1 class="h3 mb-0 ps-3">Cadastro de Vocabulário</h1>
+      </nav>
+
+      <main class="content">
+        <div class="container-fluid p-0">
+          <form class="card p-4">
+            <div class="mb-3">
+              <label for="termo" class="form-label">Termo</label>
+              <input type="text" class="form-control" id="termo" placeholder="Ex: Mandioca">
+            </div>
+            <div class="mb-3">
+              <label for="variante" class="form-label">Variante Regional</label>
+              <input type="text" class="form-control" id="variante" placeholder="Ex: Macaxeira">
+            </div>
+            <div class="mb-3">
+  <label for="regioes" class="form-label">Regiões Aplicadas (por DDD)</label>
+  <select multiple class="form-select" id="regioes">
+    <option value="82">82 – AL – Alagoano</option>
+    <option value="77">77 – BA – Baiano</option>
+    <option value="85">85 – CE – Cearense</option>
+    <option value="98">98 – MA – Maranhense</option>
+    <option value="89">89 – CE, PB, PE, BA, PI – Nordestino (genérico)</option>
+    <option value="83">83 – PB – Paraibano</option>
+    <option value="87">87 – PE – Pernambucano</option>
+    <option value="73">73 – BA – Porto-Segurense</option>
+    <option value="79">79 – SE – Sergipano</option>
+    <option value="71">71 – BA – Soteropolitano</option>
+    <option value="74">74 – PI, BA, PE – Sertanejo</option>
+    <option value="81">81 – BA, PE – Caravelense / Recifense</option>
+    <option value="75">75 – BA – Paulo-Afonsino</option>
+    <option value="86">86 – PI – Teresinense</option>
+    <option value="96">96 – AC – Interior amazônico</option>
+    <option value="92">92 – AM – Manauara</option>
+    <option value="91">91 – PA – Belenense</option>
+    <option value="69">69 – RO – Rondoniense</option>
+    <option value="93">93 – PA – Paraense</option>
+    <option value="21">21 – RJ – Carioca</option>
+    <option value="16">16 – SP – Paulista (interior)</option>
+    <option value="35">35 – MG – Mineiro</option>
+    <option value="28">28 – ES – Capixaba</option>
+    <option value="27">27 – ES – Vitoriense</option>
+    <option value="11">11 – SP – Paulistano</option>
+    <option value="13">13 – SP – Piracicabano / Santista</option>
+    <option value="34">34 – MG – Uberlandense</option>
+    <option value="15">15 – SP – Sorocabano</option>
+    <option value="31">31 – MG – Belo-horizontino</option>
+    <option value="14">14 – SP – Botucatuense</option>
+    <option value="19">19 – SP – Bragantino / Campineiro</option>
+    <option value="43">43 – MG / SP – Campo-Belense / Capão-Bonitense</option>
+    <option value="51">51 – RS – Gaúcho</option>
+    <option value="42">42 – PR, SC – Sulista</option>
+    <option value="41">41 – PR – Curitibano</option>
+    <option value="49">49 – SC – Catarinense</option>
+    <option value="45">45 – PR – Cascavelense</option>
+    <option value="62">62 – GO – Goiano</option>
+    <option value="65">65 – MT – Mato-Grossense</option>
+    <option value="61">61 – DF – Brasiliense</option>
+  </select>
+  <small class="form-text text-muted">Use Ctrl (Windows) ou Command (macOS) para selecionar múltiplas regiões.</small>
+</div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="ativo" checked>
+              <label class="form-check-label" for="ativo">Ativo</label>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-success" style="background-color: #00b86b; border-color: #00b86b;">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/js/app.js"></script>
+</body>
+</html>

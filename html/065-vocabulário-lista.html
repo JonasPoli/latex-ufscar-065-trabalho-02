@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/css/app.css" rel="stylesheet">
+  <style>
+    .sidebar .nav-link.active {
+        background-color: #0d6efd;
+        color: white;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulário - AgroSíntese</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="#">
+                    <span class="align-middle">AgroSíntese</span>
+                </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-speedometer2"></i> <span class="align-middle">Dashboard</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-telephone"></i> <span class="align-middle">DDD</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-map"></i> <span class="align-middle">Regiões</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-translate"></i> <span class="align-middle">Dialetos</span></a>
+                    </li>
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="#"><i class="bi bi-journal-text"></i> <span class="align-middle">Vocabulário</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-person-badge"></i> <span class="align-middle">Administradores</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-people"></i> <span class="align-middle">Usuários</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-chat-dots"></i> <span class="align-middle">Conversas</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-toggle="collapse" class="sidebar-link" href="#relatorios"><i class="bi bi-file-earmark-bar-graph"></i> <span class="align-middle">Relatórios</span></a>
+                        <ul id="relatorios" class="sidebar-dropdown list-unstyled collapse">
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Relatório 1</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Relatório 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-box-arrow-right"></i> <span class="align-middle">Logoff</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+<nav class="navbar navbar-expand navbar-light navbar-bg">
+  <a class="sidebar-toggle js-sidebar-toggle">
+    <i class="hamburger align-self-center"></i>
+  </a>
+  <h1 class="h3 mb-0 ps-3">Painel Administrativo - Vocabulário</h1>
+</nav>
+
+<main class="content">
+  <div class="container-fluid p-0">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h4 mb-0">Vocabulário Regional</h2>
+    <a href="#" class="btn btn-sm btn-success" style="background-color: #00b86b; border-color: #00b86b;"><i class="bi bi-plus-lg"></i> Adicionar Novo</a>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <table id="vocabularioTable" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Termo</th>
+            <th>Variante Regional</th>
+            <th>Regiões Aplicadas</th>
+            <th>Ativo</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mandioca</td><td>Macaxeira</td><td>Alagoano (AL), Soteropolitano (BA), Pernambucano (PE), Sergipano (SE), Cearense (CE), Paraibano (PB), Porto-Segurense (BA), Recifense (PE), Paulo-Afonsino (BA)</td><td><span class="badge bg-success" style="background-color: #00b86b;">Sim</span></td><td><button class="btn btn-sm btn-primary" style="background-color: #0d6efd; border-color: #0d6efd;">Editar</button></td></tr>
+          <tr><td>Mandioca</td><td>Aipim</td><td>Carioca (RJ), Capixaba (ES), Vitoriense (ES), Paulistano (SP), Brasiliense (DF)</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary" style="background-color: #0d6efd; border-color: #0d6efd;">Editar</button></td></tr>
+          <tr><td>Mandioca</td><td>Mandioca brava</td><td>Gaúcho (RS), Paranaense (PR), Mato-Grossense (MT), Rondoniense (RO), Nortista (AC, PA, AM)</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+          <tr><td>Milho verde</td><td>Espiga</td><td>Gaúcho (RS), Sulista (PR & SC), Campineiro (SP), Sorocabano (SP), Catarinense (SC)</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+          <tr><td>Milho cru ralado</td><td>Pamonha</td><td>Cearense (CE), Paraibano (PB), Recifense (PE), Baiano (BA), Sertanejo (PI)</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+          <tr><td>Milho cru ralado</td><td>Caruá</td><td>Manauara (AM), Paraense (PA), Belenense (PA), Rondoniense (RO), Nortista (AC)</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+        </tbody>
+      </table>
+      </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#vocabularioTable').DataTable({
+      language: {
+        decimal: ",",
+        emptyTable: "Nenhum dado disponível na tabela",
+        info: "Mostrando _START_ até _END_ de _TOTAL_ registros",
+        infoEmpty: "Mostrando 0 até 0 de 0 registros",
+        infoFiltered: "(filtrado de _MAX_ registros no total)",
+        infoPostFix: "",
+        thousands: ".",
+        lengthMenu: "Mostrar _MENU_ registros",
+        loadingRecords: "Carregando...",
+        processing: "Processando...",
+        search: "Pesquisar:",
+        zeroRecords: "Nenhum registro correspondente encontrado",
+        paginate: {
+          first: "Primeiro",
+          last: "Último",
+          next: "Próximo",
+          previous: "Anterior"
+        },
+        aria: {
+          sortAscending: ": ativar para ordenar a coluna em ordem crescente",
+          sortDescending: ": ativar para ordenar a coluna em ordem decrescente"
+        }
+      }
+    });
+  });
+</script>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/js/app.js"></script>
+</body>
+</html>

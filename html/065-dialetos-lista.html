@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Dialetos Brasileiros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/css/app.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        .sidebar .nav-link.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="#">
+                    <span class="align-middle">AgroSíntese</span>
+                </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-speedometer2"></i> <span class="align-middle">Dashboard</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-telephone"></i> <span class="align-middle">DDD</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-map"></i> <span class="align-middle">Regiões</span></a>
+                    </li>
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="#"><i class="bi bi-translate"></i> <span class="align-middle">Dialetos</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-journal-text"></i> <span class="align-middle">Vocabulário</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-person-badge"></i> <span class="align-middle">Administradores</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-people"></i> <span class="align-middle">Usuários</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-chat-dots"></i> <span class="align-middle">Conversas</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-toggle="collapse" class="sidebar-link" href="#relatorios"><i class="bi bi-file-earmark-bar-graph"></i> <span class="align-middle">Relatórios</span></a>
+                        <ul id="relatorios" class="sidebar-dropdown list-unstyled collapse">
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Relatório 1</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#">Relatório 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#"><i class="bi bi-box-arrow-right"></i> <span class="align-middle">Logoff</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+                <h1 class="h3 mb-0 ps-3">Painel Administrativo - Dialetos Brasileiros</h1>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h4 mb-0">Listagem de Dialetos</h2>
+    <a href="#" class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Adicionar Novo</a>
+</div>
+                    <div class="card">
+                        <div class="card-body">
+                            <table id="dialetosTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Dialeto</th>
+                                        <th>UF</th>
+                                        <th>Localização / Caracterização</th>
+                                        <th>DDD</th>
+                                        <th>Ativo</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Registros preenchidos -->
+                                    <tr><td>Alagoano</td><td>AL</td><td>Todo o estado, do litoral de Maceió à Zona da Mata</td><td>82</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+                                    <tr><td>Baiano</td><td>BA</td><td>Interior e litoral baiano em geral</td><td>77</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+                                    <tr><td>Cearense</td><td>CE</td><td>Fortaleza e Sertão Central até o Cariri</td><td>85</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+                                    <tr><td>Maranhense</td><td>MA</td><td>São Luís e Baixada Maranhense</td><td>98</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+                                    <tr><td>Nordestino (genérico)</td><td>CE, PB, PE, BA, PI</td><td>Sertão semiárido do Nordeste</td><td>89</td><td><span class="badge bg-success">Sim</span></td><td><button class="btn btn-sm btn-primary">Editar</button></td></tr>
+                                    <!-- Os demais dialetos devem ser inseridos seguindo o mesmo padrão -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/js/app.js"></script>
+    
+    
+    <script>
+    $(document).ready(function () {
+            $('#dialetosTable').DataTable({
+                language: {
+                    decimal: ",",
+                    emptyTable: "Nenhum dado disponível na tabela",
+                    info: "Mostrando _START_ até _END_ de _TOTAL_ registros",
+                    infoEmpty: "Mostrando 0 até 0 de 0 registros",
+                    infoFiltered: "(filtrado de _MAX_ registros no total)",
+                    infoPostFix: "",
+                    thousands: ".",
+                    lengthMenu: "Mostrar _MENU_ registros",
+                    loadingRecords: "Carregando...",
+                    processing: "Processando...",
+                    search: "Pesquisar:",
+                    zeroRecords: "Nenhum registro correspondente encontrado",
+                    paginate: {
+                        first: "Primeiro",
+                        last: "Último",
+                        next: "Próximo",
+                        previous: "Anterior"
+                    },
+                    aria: {
+                        sortAscending: ": ativar para ordenar a coluna em ordem crescente",
+                        sortDescending: ": ativar para ordenar a coluna em ordem decrescente"
+                    }
+                }
+});
+            });
+</script>
+</body>
+</html>

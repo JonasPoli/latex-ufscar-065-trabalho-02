@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Conversas - AgroSíntese</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/css/app.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main">
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+        <h1 class="h3 mb-0 ps-3">Lista de Conversas</h1>
+      </nav>
+
+      <main class="content">
+        <div class="container-fluid p-0">
+          <div class="card">
+            <div class="card-body">
+              <table id="conversasTable" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Contato</th>
+                    <th>Última Conversa</th>
+                    <th>Qtd. Conversas</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Exemplo -->
+                  <tr>
+                    <td class="d-none d-xxl-table-cell">
+                      <strong>(16) 98179-3421</strong>
+                      <div class="text-muted">SP - Paulista (interior)</div>
+                    </td>
+                    <td>
+                      <div>há 2 horas</div>
+                      <div class="text-muted">18/06/2025 às 13h15</div>
+                    </td>
+                    <td>12</td>
+                    <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+                  </tr>
+                  <tr>
+                    <td class="d-none d-xxl-table-cell">
+                      <strong>(85) 99188-7754</strong>
+                      <div class="text-muted">CE - Cearense</div>
+                    </td>
+                    <td>
+                      <div>há 5 minutos</div>
+                      <div class="text-muted">18/06/2025 às 15h50</div>
+                    </td>
+                    <td>8</td>
+                    <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+                  </tr>
+                  <tr>
+                    <td class="d-none d-xxl-table-cell">
+                      <strong>(92) 98899-1122</strong>
+                      <div class="text-muted">AM - Manauara</div>
+                    </td>
+                    <td>
+                      <div>há 1 dia</div>
+                      <div class="text-muted">17/06/2025 às 09h30</div>
+                    </td>
+                    <td>5</td>
+                    <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+                  </tr>
+                  <tr>
+  <td class="d-none d-xxl-table-cell">
+    <strong>(73) 98122-3344</strong>
+    <div class="text-muted">BA - Porto-Segurense</div>
+  </td>
+  <td>
+    <div>há 3 horas</div>
+    <div class="text-muted">18/06/2025 às 12h10</div>
+  </td>
+  <td>6</td>
+  <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+</tr>
+<tr>
+  <td class="d-none d-xxl-table-cell">
+    <strong>(98) 98765-1234</strong>
+    <div class="text-muted">MA - Maranhense</div>
+  </td>
+  <td>
+    <div>há 30 minutos</div>
+    <div class="text-muted">18/06/2025 às 14h30</div>
+  </td>
+  <td>9</td>
+  <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+</tr>
+<tr>
+  <td class="d-none d-xxl-table-cell">
+    <strong>(74) 99111-4455</strong>
+    <div class="text-muted">PI - Sertanejo</div>
+  </td>
+  <td>
+    <div>há 6 horas</div>
+    <div class="text-muted">18/06/2025 às 09h00</div>
+  </td>
+  <td>14</td>
+  <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+</tr>
+<tr>
+  <td class="d-none d-xxl-table-cell">
+    <strong>(21) 99988-7766</strong>
+    <div class="text-muted">RJ - Carioca</div>
+  </td>
+  <td>
+    <div>há 5 dias</div>
+    <div class="text-muted">13/06/2025 às 16h45</div>
+  </td>
+  <td>3</td>
+  <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+</tr>
+<tr>
+  <td class="d-none d-xxl-table-cell">
+    <strong>(61) 99887-3344</strong>
+    <div class="text-muted">DF - Brasiliense</div>
+  </td>
+  <td>
+    <div>há 2 dias</div>
+    <div class="text-muted">16/06/2025 às 11h00</div>
+  </td>
+  <td>10</td>
+  <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+</tr>
+<tr>
+  <td class="d-none d-xxl-table-cell">
+    <strong>(65) 98712-0001</strong>
+    <div class="text-muted">MT - Mato-Grossense</div>
+  </td>
+  <td>
+    <div>há 10 minutos</div>
+    <div class="text-muted">18/06/2025 às 15h45</div>
+  </td>
+  <td>7</td>
+  <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+</tr>
+<tr>
+  <td class="d-none d-xxl-table-cell">
+    <strong>(49) 99876-1111</strong>
+    <div class="text-muted">SC - Catarinense</div>
+  </td>
+  <td>
+    <div>há 7 horas</div>
+    <div class="text-muted">18/06/2025 às 08h15</div>
+  </td>
+  <td>4</td>
+  <td><a href="#" class="btn btn-sm btn-primary">Ver detalhes</a></td>
+</tr>
+<!-- Fim exemplos -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@adminkit/core@3.3.0/dist/js/app.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#conversasTable').DataTable({
+        language: {
+          decimal: ",",
+          emptyTable: "Nenhum dado disponível na tabela",
+          info: "Mostrando _START_ até _END_ de _TOTAL_ registros",
+          infoEmpty: "Mostrando 0 até 0 de 0 registros",
+          infoFiltered: "(filtrado de _MAX_ registros no total)",
+          lengthMenu: "Mostrar _MENU_ registros",
+          loadingRecords: "Carregando...",
+          processing: "Processando...",
+          search: "Pesquisar:",
+          zeroRecords: "Nenhum registro correspondente encontrado",
+          paginate: {
+            first: "Primeiro",
+            last: "Último",
+            next: "Próximo",
+            previous: "Anterior"
+          },
+          aria: {
+            sortAscending: ": ativar para ordenar a coluna em ordem crescente",
+            sortDescending: ": ativar para ordenar a coluna em ordem decrescente"
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

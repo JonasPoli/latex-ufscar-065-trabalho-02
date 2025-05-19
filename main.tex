@@ -69,6 +69,16 @@
     \usepackage[table,xcdraw]{xcolor}
 
 
+	% Para gerar Fluxograma
+	\usepackage{tikz}
+	\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+	\tikzstyle{caixa} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm,text centered, draw=black, fill=gray!10]
+	\tikzstyle{seta} = [thick,->,>=stealth]
+
+
+
+
+\begin{document}
 \input{partes/01-info.tex}
 \input{partes/02-pre-textual.tex}
 
@@ -90,9 +100,9 @@
     
     \input{partes/03-introducao.tex}
     \input{partes/04-desenvolvimento.tex}
-    \input{partes/05-conclusao.tex}
+    %\input{partes/05-conclusao.tex}
 
-    
+    % só pra ver se funciona mesmo
 
 
     \postextual
@@ -106,10 +116,10 @@
     \bibliography{references}
 
     
-    \input{partes/06-glossario.tex}
-    \input{partes/07-apendice01.tex}        
-  	\input{partes/08-anexo01.tex}
- 	\input{partes/09-dados-curriculares.tex}
+    %\input{partes/06-glossario.tex}
+    %\input{partes/07-apendice01.tex}        
+  	%\input{partes/08-anexo01.tex}
+ 	%\input{partes/09-dados-curriculares.tex}
   	
   	
 \end{document}
